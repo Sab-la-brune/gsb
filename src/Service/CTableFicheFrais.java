@@ -77,7 +77,7 @@ public class CTableFicheFrais {
             String matricule = rs.getString("VIS_MATRICULE_VISITEUR");
             
             CTableInclure TypeFrais =  new CTableInclure();
-            ArrayList<CFrais> liste = TypeFrais.lireUnFrais(rs.getString("VIS_MATRICULE_VISITEUR"), rs.getString("FF_MOIS_FICHE_FRAIS"));       
+            ArrayList<CFrais> liste = TypeFrais.lireUnInclure(rs.getString("VIS_MATRICULE_VISITEUR"), rs.getString("FF_MOIS_FICHE_FRAIS"));       
             
 
             return new CFicheFrais(mois, nbrHorsClassif, montantHorsClassif, matricule, liste);
@@ -178,14 +178,14 @@ public class CTableFicheFrais {
     }
 
     public static void main(String[] args) {
-        CTableFicheFrais tableFicheFrais = new CTableFicheFrais();
+        CTableFicheFrais tablefichefrais = new CTableFicheFrais();
         CTypeFrais typefrais = new CTypeFrais("22", "Resto", 3.5f);
         CFrais frais = new CFrais(2, 1.99f, typefrais);
         ArrayList<CFrais> liste = new ArrayList();
         CFicheFrais fichefrais = new CFicheFrais(2, 56, 3.5f, "vw66", liste);
         //tablefichefrais.printFicheFrais(tablefichefrais.lireUnFicheFrais("VIS_MATRICULE_VISITEUR","vw66")); 
-        tablefichefrais.insererFicheFrais(fichefrais);
-        //tablefichefrais.modifierFicheFrais(fichefrais);
+        //tablefichefrais.insererFicheFrais(fichefrais);
+        tablefichefrais.modifierFicheFrais(fichefrais);
         //tablefichefrais.supprimerFicheFrais("vw77");
 
     }
