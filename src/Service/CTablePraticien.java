@@ -168,21 +168,16 @@ public class CTablePraticien {
     
     //Methode pour modifier un praticien 
     public int modifierPraticien(CPraticien praticien){
-    String req = "UPDATE `praticien` SET PRA_NUM_PRATICIEN ='"
-                + praticien.getIdPraticien()
-                + "' , PRA_NOM_PRATICIEN = '"
-                + praticien.getNom()
-                + "' , PRA_PRENOM_PRATICIEN = '"
-                + praticien.getPrenom()
-                + "' , PRA_ADRESSE_PRATICIEN = '"
-                + praticien.getAdresse().getNumero()+","+praticien.getAdresse().getRue()
-                + "' , PRA_CP_PRATICIEN = '"
-                + praticien.getAdresse().getCodePostal()
-                + "' , PRA_VILLE_PRATICIEN = '"
-                + praticien.getAdresse().getVille()
-                + "' , PRA_COEFNOTORIETE_PRATICIEN = '"+ praticien.getCoeffNotoriete()
-                + "' , TYP_CODE_TYPE_PRATICIEN = '"+ praticien.getTypePraticien().getIdType()
-                + "' WHERE PRA_NUM_PRATICIEN = '"+praticien.getIdPraticien()+"';";
+    String req = "UPDATE `praticien` SET"
+            + "PRA_NUM_PRATICIEN ='"+ praticien.getIdPraticien()+ "' , "
+            + "PRA_NOM_PRATICIEN = '"+ praticien.getNom()+ "' ,"
+            + "PRA_PRENOM_PRATICIEN = '"+ praticien.getPrenom()+ "' ,"
+            + "PRA_ADRESSE_PRATICIEN = '"+ praticien.getAdresse().getNumero()+","+praticien.getAdresse().getRue()+ "' ,"
+            + "PRA_CP_PRATICIEN = '"+ praticien.getAdresse().getCodePostal()+ "' ,"
+            + "PRA_VILLE_PRATICIEN = '"+ praticien.getAdresse().getVille()+ "' ,"
+            + "PRA_COEFNOTORIETE_PRATICIEN = '"+ praticien.getCoeffNotoriete()+ "' ,"
+            + "TYP_CODE_TYPE_PRATICIEN = '"+ praticien.getTypePraticien().getIdType()+"'"
+            + "' WHERE PRA_NUM_PRATICIEN = '"+praticien.getIdPraticien()+"';";
     
         int res = -1;
         if (bdd.connecter() == true) {
@@ -205,9 +200,9 @@ public class CTablePraticien {
         CSpePossede spepossede = new CSpePossede("Doctorat de philo", 15, specialite);
         List<CSpePossede> list = new ArrayList();
         list.add(spepossede);
-       CPraticien praticien = new CPraticien(1, "Joffre", "Joseph", new CAdresse("28", "rue du Général de Gaulle", "35400", "Saint Malo"),typepraticien, list, 5);
-        //tablepraticien.insererPraticien(praticien);
-        tablepraticien.modifierPraticien(praticien);
+       CPraticien praticien = new CPraticien(1, "Nelson", "Montfort", new CAdresse("28", "rue Foch", "22100", "Saint Brieuc"),typepraticien, list, 5);
+        tablepraticien.insererPraticien(praticien);
+        //tablepraticien.modifierPraticien(praticien);
         //tablepraticien.supprimerPraticien("1");
         //tablepraticien.printPraticiens(tablePraticien.lirePraticien());
         //tablepraticien.printPraticiens(tablePraticien.lireUnPraticien("PRA_NUM_PRATICIEN", "12"));
