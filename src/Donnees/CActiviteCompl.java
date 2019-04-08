@@ -21,7 +21,7 @@ public class CActiviteCompl {
     protected String lieu;
     protected String theme;
     protected List<CVisiteur> visiteurList;
-    protected List<CPraticien> praticienList;
+    protected List<CInvitation> invitationList;
     protected String etat;
     
     
@@ -68,12 +68,12 @@ public class CActiviteCompl {
         this.visiteurList = visiteurList;
     }
 
-    public List<CPraticien> getPraticienList() {
-        return praticienList;
+    public List<CInvitation> getInvitationList() {
+        return invitationList;
     }
 
-    public final void setPraticienList(List<CPraticien> praticienList) {
-        this.praticienList = praticienList;
+    public final void setInvitationList(List<CInvitation> invitationList) {
+        this.invitationList = invitationList;
     }
 
     public String getEtat() {
@@ -89,14 +89,14 @@ public class CActiviteCompl {
     //Constructeur
     
     public CActiviteCompl(int idACtCompl, GregorianCalendar date, String lieu, String theme,
-            List<CVisiteur> visiteurList, List<CPraticien> praticienList, String etat){
+            List<CVisiteur> visiteurList, List<CInvitation> invitationList, String etat){
                 setIdACtCompl(idACtCompl);
                 setDate(date);
                 setLieu(lieu);
                 setTheme(theme);
                 setTheme(theme);
                 setVisiteurList(visiteurList);
-                setPraticienList(praticienList);
+                setInvitationList(invitationList);
                 setEtat(etat);
             
     }
