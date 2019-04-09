@@ -12,7 +12,6 @@ package Service;
 public class CMetierFicheFrais {
     
     CTableFicheFrais tablefichefrais;
-    CTableTypeFrais tabletypefrais;
     CTableInclure tableinclure;
 
     public CTableFicheFrais getTablefichefrais() {
@@ -23,14 +22,6 @@ public class CMetierFicheFrais {
         this.tablefichefrais = tablefichefrais;
     }
 
-    public CTableTypeFrais getTabletypefrais() {
-        return tabletypefrais;
-    }
-
-    public void setTabletypefrais(CTableTypeFrais tabletypefrais) {
-        this.tabletypefrais = tabletypefrais;
-    }
-
     public CTableInclure getTableinclure() {
         return tableinclure;
     }
@@ -38,6 +29,20 @@ public class CMetierFicheFrais {
     public void setTableinclure(CTableInclure tableinclure) {
         this.tableinclure = tableinclure;
     }
+    
+    
+    public ActionCreerFiche(){
+    }
+    
+    public AcctionModifierFiche(){
+    }
+    
+    public ActionSupprimerFiche(){
+    }
+    
+    public ActionConsulterFiche(){
+    }
+
     
 
     
