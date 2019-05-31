@@ -93,7 +93,7 @@ public class CTableTypeFrais {
             bdd.deconnecter();
             return listeDeFrais;
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd type_frais");
         }
         return null;
     }
@@ -111,7 +111,7 @@ public class CTableTypeFrais {
             
             }  
             if(listTypefrais.isEmpty()){
-                System.out.println("not found");
+                System.out.println("TYPE FRAIS not found");
             }
             } catch (SQLException ex) {
             }
