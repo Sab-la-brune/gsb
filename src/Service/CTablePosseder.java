@@ -21,14 +21,16 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author admin
+ * @Sabrina Cos
  */
 public class CTablePosseder {
     
-
+    //attributs
     
     protected ArrayList<CSpePossede> listespepossede;
     protected CBDD bdd;
+    
+    // Getters et Setters
 
     public ArrayList<CSpePossede> getlistespepossede() {
         return listespepossede;
@@ -50,6 +52,8 @@ public class CTablePosseder {
         this.bdd = new CBDD(new CParametresStockageBDD("parametresBdd.properties"));
     }
     
+    
+    //Méthodes qui appelle et modifie la table posseder
    
     //inserer posseder
     public int insererPosseder(CSpePossede spepossede, CPraticien praticien) {
@@ -65,7 +69,7 @@ public class CTablePosseder {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd POSSEDER KO");
         }
         return res;
 
@@ -106,7 +110,7 @@ public class CTablePosseder {
             bdd.deconnecter();
             return listDePosseder;
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd POSSEDER KO");
         }
         return null;
     }
@@ -124,14 +128,14 @@ public class CTablePosseder {
             
             }  
             if(listSpePosseder.isEmpty()){
-                System.out.println("not found");
+                System.out.println("POSSEDER not found");
             }
             } catch (SQLException ex) {
             }
             bdd.deconnecter();
             return listSpePosseder;
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd POSSEDER KO");
         }
         return null;
     }
@@ -152,7 +156,7 @@ public class CTablePosseder {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd POSSEDER KO");
         }
         return res;
 
@@ -174,7 +178,7 @@ public class CTablePosseder {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd POSSEDER KO");
         }
         return res;
 

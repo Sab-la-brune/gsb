@@ -16,12 +16,16 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author admin
+ * @Sabrina Cos
  */
 public class CTableDepartement {
+    
+    //attributs
 
     protected ArrayList<CDepartement> listedepartements;
     protected CBDD bdd;
+    
+    // Getters et Setters
 
     public ArrayList<CDepartement> getListedepartements() {
         return listedepartements;
@@ -44,6 +48,8 @@ public class CTableDepartement {
     }
     
     
+    //Méthodes qui appelle et modifie la table departement
+    
     //inserer departement
     public int insererDepartement(CDepartement departement) {
         String req = "INSERT INTO `departement` (`DEP_CODE_DEPARTEMENT`,`DEP_NOM_DEPARTEMENT`, `DEP_CHEFVENTE_DEPARTEMENT`)"
@@ -56,7 +62,7 @@ public class CTableDepartement {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd DEPARTEMENT KO");
         }
         return res;
 
@@ -95,7 +101,7 @@ public class CTableDepartement {
             bdd.deconnecter();
             return listDeDepartements;
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd DEPARTEMENT KO");
         }
         return null;
     }
@@ -113,14 +119,14 @@ public class CTableDepartement {
             
             }  
             if(listDepartement.isEmpty()){
-                System.out.println("not found");
+                System.out.println("DEPARTEMENT not found");
             }
             } catch (SQLException ex) {
             }
             bdd.deconnecter();
             return listDepartement;
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd DEPARTEMENT KO");
         }
         return null;
     }
@@ -141,7 +147,7 @@ public class CTableDepartement {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd DEPARTEMENT KO");
         }
         return res;
 
@@ -161,7 +167,7 @@ public class CTableDepartement {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd DEPARTEMENT KO");
         }
         return res;
 

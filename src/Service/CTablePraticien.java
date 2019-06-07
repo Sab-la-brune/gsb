@@ -25,9 +25,12 @@ import java.util.logging.Logger;
  */
 public class CTablePraticien {
     
+    //attributs
 
     protected ArrayList<CPraticien> listepraticiens;
     protected CBDD bdd;
+    
+    // Getters et Setters
 
     public ArrayList<CPraticien> getListepraticiens() {
         return listepraticiens;
@@ -49,6 +52,9 @@ public class CTablePraticien {
     public CTablePraticien(){
        this.bdd = new CBDD(new CParametresStockageBDD("parametresBdd.properties"));  
     }
+    
+    
+    //Méthodes qui appelle et modifie la table praticien
    
     //Methode pour inserer un praticien
     public int insererPraticien(CPraticien praticien){
@@ -67,7 +73,7 @@ public class CTablePraticien {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd PRATICIEN KO");
         }
         return res;
     }
@@ -111,14 +117,14 @@ public class CTablePraticien {
                     listeDePraticiens.add(praticien);
                 }
                 if(listeDePraticiens.isEmpty()){
-                    System.out.println("404 not found");
+                    System.out.println("PRATICIEN not found");
                 }
             } catch (SQLException ex) {
             }
             bdd.deconnecter();
             return listeDePraticiens;
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd PRATICIEN KO");
         }
         return null;
     }
@@ -133,14 +139,14 @@ public class CTablePraticien {
                     listeDePraticiens.add(praticien);
                 }
                 if(listeDePraticiens.isEmpty()){
-                    System.out.println("404 not found");
+                    System.out.println("PRATICIEN not found");
                 }
             } catch (SQLException ex) {
             }
             bdd.deconnecter();
             return listeDePraticiens;
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd PRATICIEN KO");
         }
         return null;
     }
@@ -161,7 +167,7 @@ public class CTablePraticien {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd PRATICIEN KO");
         }
         return res;
     }
@@ -185,7 +191,7 @@ public class CTablePraticien {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd PRATICIEN KO");
         }
         return res;
     }

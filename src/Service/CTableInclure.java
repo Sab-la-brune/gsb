@@ -18,12 +18,16 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author admin
+ * @Sabrina Cos
  */
 public class CTableInclure {
     
+    //attributs
+    
     protected ArrayList<CFrais> listeinclure;
     protected CBDD bdd;
+    
+    // Getters et Setters
 
     public ArrayList<CFrais> getlisteinclure() {
         return listeinclure;
@@ -45,6 +49,8 @@ public class CTableInclure {
         this.bdd = new CBDD(new CParametresStockageBDD("parametresBdd.properties"));
     }
     
+    
+    //Méthodes qui appelle et modifie la table inclure
    
     //inserer inclure
     public int insererInclure(CFrais frais, CFicheFrais fichefrais) {
@@ -61,7 +67,7 @@ public class CTableInclure {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd INCLURE KO");
         }
         return res;
 
@@ -104,7 +110,7 @@ public class CTableInclure {
             bdd.deconnecter();
             return listDeInclure;
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd INCLURE KO");
         }
         return null;
     }
@@ -122,14 +128,14 @@ public class CTableInclure {
             
             }  
             if(listInclure.isEmpty()){
-                System.out.println("not found");
+                System.out.println("INCLURE not found");
             }
             } catch (SQLException ex) {
             }
             bdd.deconnecter();
             return listInclure;
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd INCLURE KO");
         }
         return null;
     }
@@ -150,7 +156,7 @@ public class CTableInclure {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd INCLURE KO");
         }
         return res;
 
@@ -173,7 +179,7 @@ public class CTableInclure {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd INCLURE KO");
         }
         return res;
 

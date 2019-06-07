@@ -17,12 +17,16 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author admin
+ * @Sabrina Cos
  */
 public class CTableRegion {
+    
+    //attributs
 
     protected ArrayList<CRegion> listeregions;
     protected CBDD bdd;
+    
+    // Getters et Setters
 
     public ArrayList<CRegion> getListeregions() {
         return listeregions;
@@ -43,6 +47,9 @@ public class CTableRegion {
     public CTableRegion() {
         this.bdd = new CBDD(new CParametresStockageBDD("parametresBdd.properties"));
     }
+    
+    
+    //Méthodes qui appelle et modifie la table region
 
     //créer la table
     /*public int creerTable() {
@@ -55,7 +62,7 @@ public class CTableRegion {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd REGION KO");
         }
         return res;
     }*/
@@ -72,7 +79,7 @@ public class CTableRegion {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd REGION KO");
         }
         return res;
 
@@ -110,7 +117,7 @@ public class CTableRegion {
             bdd.deconnecter();
             return listDeRegions;
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd REGION KO");
         }
         return null;
     }
@@ -128,14 +135,14 @@ public class CTableRegion {
             
             }  
             if(listRegion.isEmpty()){
-                System.out.println("not found");
+                System.out.println("REGION not found");
             }
             } catch (SQLException ex) {
             }
             bdd.deconnecter();
             return listRegion;
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd REGION KO");
         }
         return null;
     }
@@ -156,7 +163,7 @@ public class CTableRegion {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd REGION KO");
         }
         return res;
 
@@ -183,7 +190,7 @@ public class CTableRegion {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd REGION KO");
         }
         return res;
 

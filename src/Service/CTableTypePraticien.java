@@ -168,7 +168,7 @@ protected ArrayList<CTypePraticien> listetypepraticiens;
 
     public static void main(String[] args) {
         CTableTypePraticien tabletypepraticien = new CTableTypePraticien();
-        CTypePraticien typepraticien = new CTypePraticien(6, "ortho", "hopital");
+        CTypePraticien typepraticien = new CTypePraticien(1, "ortho", "hopital");
         tabletypepraticien.insererTypePraticien(typepraticien);
         //tabletypepraticien.supprimerTypePraticien("ortho");
 

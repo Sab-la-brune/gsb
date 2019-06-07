@@ -21,12 +21,16 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author admin
+ * @Sabrina Cos
  */
 public class CTableTravailler {
+    
+    //attributs
 
     protected ArrayList<CRole> listetravailler;
     protected CBDD bdd;
+    
+    // Getters et Setters
 
     public ArrayList<CRole> getListetravailler() {
         return listetravailler;
@@ -49,6 +53,8 @@ public class CTableTravailler {
     }
     
     
+    //Méthodes qui appelle et modifie la table travailler
+    
     //inserer travailler
     public int insererTravailler(CRole role, CRegion region, CVisiteur visiteur) {
         String req = "INSERT INTO `travailler` (`JJMMAA_EMBDATE`,`REG_CODE_REGION`,"
@@ -63,7 +69,7 @@ public class CTableTravailler {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd TRAVAILLER KO");
         }
         return res;
 
@@ -102,7 +108,7 @@ public class CTableTravailler {
             bdd.deconnecter();
             return listDeTravailler;
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd TRAVAILLER KO");
         }
         return null;
     }
@@ -120,14 +126,14 @@ public class CTableTravailler {
             
             }  
             if(listTravailler.isEmpty()){
-                System.out.println("not found");
+                System.out.println("TRAVAILLER not found");
             }
             } catch (SQLException ex) {
             }
             bdd.deconnecter();
             return listTravailler;
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd TRAVAILLER KO");
         }
         return null;
     }
@@ -148,7 +154,7 @@ public class CTableTravailler {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd TRAVAILLER KO");
         }
         return res;
 
@@ -169,7 +175,7 @@ public class CTableTravailler {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd TRAVAILLER KO");
         }
         return res;
 

@@ -20,12 +20,16 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author admin
+ * @Sabrina Cos
  */
 public class CTableVisiteur {
+    
+    //attributs
 
     protected ArrayList<CVisiteur> listevisiteurs;
     protected CBDD bdd;
+    
+    // Getters et Setters
 
     public ArrayList<CVisiteur> getListevisiteurs() {
         return listevisiteurs;
@@ -46,10 +50,13 @@ public class CTableVisiteur {
     public CTableVisiteur() {
         this.bdd = new CBDD(new CParametresStockageBDD("parametresBdd.properties"));
     }
+    
+    
+    //Méthodes qui appelle et modifie la table visiteur
 
     //créer la table
     /*public int creerTable() {
-        String req = "CREATE TABLE if NOT EXISTS `bpgobretagne`.`tableclient` "
+        String req = "CREATE TABLE if NOT EXISTS `visiteur`.`tableclient` "
                 + "( `matricule` VARCHAR(11) NOT NULL ,`nom` VARCHAR(20) NOT NULL , `prenom` VARCHAR(20) NOT NULL '0' , PRIMARY KEY (`matricule`))"
                 + " ENGINE = InnoDB;";
         int res = -1;
@@ -58,7 +65,7 @@ public class CTableVisiteur {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd VISITEUR KO");
         }
         return res;
     }*/
@@ -80,7 +87,7 @@ public class CTableVisiteur {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd VISITEUR KO");
         }
         return res;
 
@@ -128,7 +135,7 @@ public class CTableVisiteur {
             bdd.deconnecter();
             return listDeVisiteurs;
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd VISITEUR KO");
         }
         return null;
     }
@@ -146,14 +153,14 @@ public class CTableVisiteur {
             
             }  
             if(listVisiteur.isEmpty()){
-                System.out.println("not found");
+                System.out.println("VISITEUR not found");
             }
             } catch (SQLException ex) {
             }
             bdd.deconnecter();
             return listVisiteur;
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd VISITEUR KO");
         }
         return null;
     }
@@ -174,7 +181,7 @@ public class CTableVisiteur {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd VISITEUR KO");
         }
         return res;
 
@@ -200,7 +207,7 @@ public class CTableVisiteur {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd VISITEUR KO");
         }
         return res;
 

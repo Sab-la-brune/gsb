@@ -16,14 +16,18 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author admin
+ * @Sabrina Cos
  */
 
 public class CTableTypeFrais {
+    
+    //attributs
 
     protected ArrayList<CTypeFrais> listefrais;
     protected CBDD bdd;
 
+    // Getters et Setters
+    
     public ArrayList<CTypeFrais> getlistefrais() {
         return listefrais;
     }
@@ -45,6 +49,8 @@ public class CTableTypeFrais {
     }
 
     
+    //Méthodes qui appelle et modifie la table type frais
+    
     //inserer type frais
     public int insererTypeFrais(CTypeFrais typefrais) {
         String req = "INSERT INTO `type_frais` (`TF_CODE_TYPE_FRAIS`,`TF_LIBELLE_TYPE_FRAIS`, `TF_FORFAIT_TYPE_FRAIS`)"
@@ -56,7 +62,7 @@ public class CTableTypeFrais {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd TYPE FRAIS KO");
         }
         return res;
 
@@ -93,7 +99,7 @@ public class CTableTypeFrais {
             bdd.deconnecter();
             return listeDeFrais;
         } else {
-            System.out.println("Connexion manipulationbdd type_frais");
+            System.out.println("Connexion manipulationbdd TYPE FRAIS");
         }
         return null;
     }
@@ -118,7 +124,7 @@ public class CTableTypeFrais {
             bdd.deconnecter();
             return listTypefrais;
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd TYPE FRAIS KO");
         }
         return null;
     }
@@ -139,7 +145,7 @@ public class CTableTypeFrais {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd TYPE FRAIS KO");
         }
         return res;
 
@@ -159,7 +165,7 @@ public class CTableTypeFrais {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd TYPE FRAIS KO");
         }
         return res;
 

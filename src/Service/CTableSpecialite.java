@@ -16,13 +16,16 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author admin
+ * @Sabrina Cos
  */
 public class CTableSpecialite {
     
+    //attributs
 
     protected ArrayList<CSpecialite> listespecialites;
     protected CBDD bdd;
+    
+    // Getters et Setters
 
     public ArrayList<CSpecialite> getListespecialites() {
         return listespecialites;
@@ -44,6 +47,9 @@ public class CTableSpecialite {
         this.bdd = new CBDD(new CParametresStockageBDD("parametresBdd.properties"));
     }
     
+    
+    //Méthodes qui appelle et modifie la table specialite
+    
     //inserer specialite
     public int insererSpecialite(CSpecialite specialite) {
         String req = "INSERT INTO `specialite` (`SPE_CODE_SPECIALITE`,`SPE_LIBELLE_SPECIALITE`)"
@@ -55,7 +61,7 @@ public class CTableSpecialite {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd SPECIALITE KO");
         }
         return res;
 
@@ -93,7 +99,7 @@ public class CTableSpecialite {
             bdd.deconnecter();
             return listDeSpecialites;
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd SPECIALITE KO");
         }
         return null;
     }
@@ -111,14 +117,14 @@ public class CTableSpecialite {
             
             }  
             if(listSpecialite.isEmpty()){
-                System.out.println("not found");
+                System.out.println("SPECIALITE not found");
             }
             } catch (SQLException ex) {
             }
             bdd.deconnecter();
             return listSpecialite;
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd SPECIALITE KO");
         }
         return null;
     }
@@ -139,7 +145,7 @@ public class CTableSpecialite {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd SPECIALITE KO");
         }
         return res;
 
@@ -158,7 +164,7 @@ public class CTableSpecialite {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd SPECIALITE KO");
         }
         return res;
 

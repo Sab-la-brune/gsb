@@ -16,12 +16,16 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author admin
+ * @Sabrina Cos
  */
 public class CTableSecteur {
+    
+    //attributs
 
     protected ArrayList<CSecteur> listesecteurs;
     protected CBDD bdd;
+    
+    // Getters et Setters
 
     public ArrayList<CSecteur> getListesecteurs() {
         return listesecteurs;
@@ -43,6 +47,9 @@ public class CTableSecteur {
         this.bdd = new CBDD(new CParametresStockageBDD("parametresBdd.properties"));
     }
     
+    
+    //Méthodes qui appelle et modifie la table secteur
+    
     //inserer secteur
     public int insererSecteur(CSecteur secteur) {
         String req = "INSERT INTO `secteur` (`SEC_CODE_SECTEUR`,`SEC_LIBELLE`) VALUES ('" + secteur.getIdSecteur() + "', '" + secteur.getNomSecteur() + "') ;";
@@ -53,7 +60,7 @@ public class CTableSecteur {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd SECTEUR KO");
         }
         return res;
 
@@ -91,7 +98,7 @@ public class CTableSecteur {
             bdd.deconnecter();
             return listDeSecteurs;
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd SECTEUR KO");
         }
         return null;
     }
@@ -109,14 +116,14 @@ public class CTableSecteur {
             
             }  
             if(listSecteur.isEmpty()){
-                System.out.println("not found");
+                System.out.println("SECTEUR not found");
             }
             } catch (SQLException ex) {
             }
             bdd.deconnecter();
             return listSecteur;
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd SECTEUR KO");
         }
         return null;
     }
@@ -137,7 +144,7 @@ public class CTableSecteur {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd SECTEUR KO");
         }
         return res;
 
@@ -156,7 +163,7 @@ public class CTableSecteur {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd SECTEUR KO");
         }
         return res;
 

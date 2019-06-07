@@ -21,13 +21,17 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author admin
+ * @author Sabrina Cos
  */
 public class CTableFicheFrais {
 
+    //attributs
+    
     protected ArrayList<CFicheFrais> listefichefrais;
     protected CBDD bdd;
-
+    
+    // Getters et Setters
+    
     public ArrayList<CFicheFrais> getlistefichefrais() {
         return listefichefrais;
     }
@@ -49,8 +53,9 @@ public class CTableFicheFrais {
     }
 
     
+    //Méthodes qui appelle et modifie la table fiche frais
     
-    //inserer fichefrais
+    //inserer d'une fichefrais
     public int insererFicheFrais(CFicheFrais fichefrais, CVisiteur visiteur) {
         String req = "INSERT INTO `fiche_frais` (`FF_MOIS_FICHE_FRAIS`,`FF_NBHORSCLASSIF`, `FF_MONTANTHORSCLASSIF`, `VIS_MATRICULE_VISITEUR`) "
                 + "VALUES ('" + fichefrais.getMois() + "', '" + fichefrais.getNbrHorsClassif() + "','" + fichefrais.getMontantHorsClassif() + "', "
@@ -62,13 +67,13 @@ public class CTableFicheFrais {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd FICHE FRAIS KO");
         }
         return res;
 
     }
 
-    //
+    //Convertie les données récupérées de la table
     CFicheFrais convertir_RS_FicheFrais(ResultSet rs) {
         try {
             int mois = rs.getInt("FF_MOIS_FICHE_FRAIS");
@@ -104,7 +109,7 @@ public class CTableFicheFrais {
             bdd.deconnecter();
             return listDeFicheFrais;
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd FICHE FRAIS KO");
         }
         return null;
     }
@@ -122,14 +127,14 @@ public class CTableFicheFrais {
             
             }  
             if(listFicheFrais.isEmpty()){
-                System.out.println("not found");
+                System.out.println("FICHE FRAIS not found");
             }
             } catch (SQLException ex) {
             }
             bdd.deconnecter();
             return listFicheFrais;
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd FICHE FRAIS KO");
         }
         return null;
     }
@@ -150,7 +155,7 @@ public class CTableFicheFrais {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd FICHE FRAIS KO");
         }
         return res;
 
@@ -171,7 +176,7 @@ public class CTableFicheFrais {
             System.out.println("Res = " + res);
             bdd.deconnecter();
         } else {
-            System.out.println("Connexion KO");
+            System.out.println("Connexion manipulationbdd FICHE FRAIS KO");
         }
         return res;
 
